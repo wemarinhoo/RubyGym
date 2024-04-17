@@ -12,20 +12,87 @@
   <script src="./src/js/script.js" defer></script>
 </head>
 <body class="bg-neutral300 font-sans-serif flex flex-col w-screen px-28">
-  <header class="flex w-full py-4 items-center justify-between fixed right-0 px-28">
+  <header class="flex w-full py-4 items-center justify-between fixed right-0 px-28 bg-neutral300">
     <div>
-      <p class="text-neutral0 text-[2rem] font-bold"><span class="text-primary">Ruby</span>Gym</p>
+      <a href="#home"><p class="text-neutral0 text-[2rem] font-bold"><span class="text-primary">Ruby</span>Gym</p></a>
     </div>
 
     <nav>
       <ul class="flex items-center gap-16">
-        <li><a href="" class="text-neutral0 text-lg ">Vantagens</a></li>
-        <li><a href="" class="text-neutral0 text-lg ">Planos</a></li>
-        <li><a href="" class="text-neutral0 text-lg ">Sobre</a></li>
-        <li><a href="" class="text-neutral0 text-lg ">Treinadores</a></li>
+        <li><a href="" class="text-neutral0 text-lg hover:text-primary transition-colors duration-300">Vantagens</a></li>
+        <li><a href="" class="text-neutral0 text-lg hover:text-primary transition-colors duration-300">Planos</a></li>
+        <li><a href="" class="text-neutral0 text-lg hover:text-primary transition-colors duration-300">Sobre</a></li>
+        <li><a href="" class="text-neutral0 text-lg hover:text-primary transition-colors duration-300">Treinadores</a></li>
       </ul>
     </nav>
   </header>
+
+  <section id="home" class="w-full h-[110vh] flex items-center">
+     <div class="flex flex-col gap-10 w-1/2">
+      <p class="text-neutral0 font-bold text-[2.5rem]">Sessão experimental gratuita
+      com um treinador</p>
+
+      <div> 
+        <button class="text-neutral0 font-bold text-lg bg-primary rounded-full px-8 py-3 hover:-translate-y-2 duration-300">Contate-nos</button>
+      </div>
+     </div>
+
+     <div class="w-1/2">
+      <img src="./src/images/home.jpg" alt="" class=" w-full h-auto rounded-xl">
+     </div>
+  </section>
+
+  <section id="advantages" class="w-full h-auto py-20">
+    <div class="mb-28">
+      <span class="text-neutral0 font-bold text-[2rem]">Vantagens Exclusivas</span>
+    </div>
+
+    <div class="grid grid-cols-2 gap-20">
+      <div class="flex items-center gap-6">
+        <div>
+          <img src="./src/icons/exclusive-classes.svg" alt="" class="w-12 h-12">
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <span class="text-neutral0 text-lg font-bold">Treinamento Personalizado</span>
+          <p class="text-neutral100 text-sm">Sessões individuais adaptadas às suas metas de condicionamento</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <div>
+          <img src="./src/icons/four-zones.svg" alt="" class="w-12 h-12">
+        </div>
+      
+        <div class="flex flex-col gap-2">
+          <span class="text-neutral0 text-lg font-bold">4 Áreas de Treino</span>
+          <p class="text-neutral100 text-sm">do cardio ao funcional e ciclo. Área separada para boxe e artes marciais</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <div>
+          <img src="./src/icons/personalized-training.svg" alt="" class="w-12 h-12">
+        </div>
+      
+        <div class="flex flex-col gap-2">
+          <span class="text-neutral0 text-lg font-bold">Aulas Exclusivas</span>
+          <p class="text-neutral100 text-sm">Acesso as aulas internas não disponíveis em outras academias</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <div>
+          <img src="./src/icons/discounts.svg" alt="" class="w-12 h-12">
+        </div>
+      
+        <div class="flex flex-col gap-2">
+          <span class="text-neutral0 text-lg font-bold">Descontos em Parceiros</span>
+          <p class="text-neutral100 text-sm">Ofertas especiais em produtos e serviços de parceiros selecionados</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
