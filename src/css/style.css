@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.carousel-indicators .glider-dot{
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #F8F8FF;
+  border-radius: 12px;
+  transition: opacity .3s ease-in-out;
+}
+
+.carousel-indicators .glider-dot:hover{
+  opacity: .6;
+}
+
+.carousel-indicators .glider-dot.active{
+  background-color: #B80100;
+}

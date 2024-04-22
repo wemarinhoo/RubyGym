@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-pt-24">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RubyGym</title>
+  <link href=" https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css " rel="stylesheet">
   <link href="./src/css/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
   <link rel="shortcut icon" href="./src/icons/logo.svg" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+  rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js" defer></script>
   <script src="./src/js/script.js" defer></script>
 </head>
-<body class="bg-neutral300 font-sans-serif flex flex-col w-screen px-28">
-  <header class="flex w-full py-4 items-center justify-between fixed right-0 px-28 bg-neutral300">
+<body class="bg-neutral300 font-sans-serif flex flex-col w-screen px-28 antialiased">
+  <header class="flex w-full py-4 items-center justify-between fixed right-0 px-28 bg-neutral300 z-10">
     <div>
-      <a href="#home"><p class="text-neutral0 text-[2rem] font-bold"><span class="text-primary">Ruby</span>Gym</p></a>
+      <a href="#home"><p class="text-neutral0 text-[2rem] font-bold font-grotesk"><span class="text-primary">Ruby</span>Gym</p></a>
     </div>
 
     <nav>
@@ -27,7 +32,7 @@
     </nav>
   </header>
 
-  <section id="home" class="w-full h-[110vh] flex items-center">
+  <section id="home" class="w-full h-[110vh] flex items-center gap-20">
      <div class="flex flex-col gap-10 w-1/2">
       <p class="text-neutral0 font-bold text-[2.5rem]">Sessão experimental gratuita
       com um treinador</p>
@@ -99,21 +104,251 @@
         <span class="text-[2rem] text-neutral0 font-bold mb-28">Planos Disponíveis</span>
       </div>
       
-      <div class="w-full grid grid-cols-3 px-20 gap-12">
-        <div class="w-80 h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col">
-          <div class="flex flex-col py-4 gap-3 items-center">
+      <div class="w-full grid grid-cols-3 px-14 gap-12">
+        <div class="w-80 h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+          <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
             <span class="text-neutral0 text-2xl font-bold">Plano Mensal</span>
             <span class="text-secondary text-2xl font-bold">R$ 100,00</span>
           </div>
 
           <div class="h-[2px] w-full bg-neutral200"></div>
 
-          <div class="py-6">
+          <div class="p-6 flex flex-col justify-between h-full">
+            <div class="flex flex-col gap-3 w-full">
+              <div class="flex gap-3 items-center">
+                <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+                <p class="text-lg text-neutral100">Acesso ilimitado à academia
+                e suas instalações</p>
+              </div>
+
+              <div class="flex gap-3 items-center">
+                <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+                <p class="text-lg text-neutral100">Variedade de equipamentos
+                e aulas em grupo</p>
+              </div>
+
+              <div class="flex gap-3 items-center">
+                <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+                <p class="text-lg text-neutral100">Flexibilidade para cancelar
+                ou pausar a assinatura</p>
+              </div>
+            </div>
             
+            <div class="flex w-full justify-center">
+              <button class="bg-primary text-lg font-bold text-neutral0 px-8 py-2 rounded-full">Comprar</button>
+            </div>
+        </div>
+      </div>
+
+      <div class="w-80 h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+        <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
+          <span class="text-neutral0 text-2xl font-bold">Plano Trimestral</span>
+          <span class="text-secondary text-2xl font-bold">R$ 300,00</span>
+        </div>
+      
+        <div class="h-[2px] w-full bg-neutral200"></div>
+      
+        <div class="p-6 flex flex-col justify-between h-full">
+          <div class="flex flex-col gap-3 w-full">
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Descontos significativos em
+              comparação com o mensal</p>
+            </div>
+
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Compromisso com metas de
+              condicionamento físico</p>
+            </div>
+
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Possibilidade de avaliação e
+              ajuste frequente das metas</p>
+            </div>
+      
+          </div>
+          
+          <div class="flex w-full justify-center">
+            <button class="bg-primary text-lg font-bold text-neutral0 px-8 py-2 rounded-full">Comprar</button>
           </div>
         </div>
       </div>
+
+      <div class="w-80 h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+        <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
+          <span class="text-neutral0 text-2xl font-bold">Plano Semestral</span>
+          <span class="text-secondary text-2xl font-bold">R$ 540,00</span>
+        </div>
+      
+        <div class="h-[2px] w-full bg-neutral200"></div>
+      
+        <div class="p-6 flex flex-col justify-between h-full">
+          <div class="flex flex-col gap-3 w-full">
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Descontos expressivos em
+              comparação com o mensal</p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Maior compromisso com
+              metas de condicionamento</p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Potencial para uma maior
+              dedicação e resultados</p>
+            </div>
+      
+          </div>
+          
+          <div class="flex w-full justify-center">
+            <button class="bg-primary text-lg font-bold text-neutral0 px-8 py-2 rounded-full">Comprar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-80 h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+        <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
+          <span class="text-neutral0 text-2xl font-bold">Plano Anual</span>
+          <span class="text-secondary text-2xl font-bold">R$ 960,00</span>
+        </div>
+      
+        <div class="h-[2px] w-full bg-neutral200"></div>
+      
+        <div class="p-6 flex flex-col justify-between h-full">
+          <div class="flex flex-col gap-3 w-full">
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Descontos expressivos em
+              comparação com outros</p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Compromisso com metas de
+              condicionamento físico</p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Benefícios adicionais como
+              treinos personalizados</p>
+            </div>
+      
+          </div>
+          
+          <div class="flex w-full justify-center">
+            <button class="bg-primary text-lg font-bold text-neutral0 px-8 py-2 rounded-full">Comprar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-80 h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+        <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
+          <span class="text-neutral0 text-2xl font-bold">Plano Familiar</span>
+          <span class="text-secondary text-2xl font-bold">R$ 350,00</span>
+        </div>
+      
+        <div class="h-[2px] w-full bg-neutral200"></div>
+      
+        <div class="p-6 flex flex-col justify-between h-full">
+          <div class="flex flex-col gap-3 w-full">
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Economia para famílias que
+              desejam treinar juntas</p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Incentivo ao exercício em
+              grupo e à saúde familiar</p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Desconto progressivo a cada
+              membro adicional</p>
+            </div>
+      
+          </div>
+          
+          <div class="flex w-full justify-center">
+            <button class="bg-primary text-lg font-bold text-neutral0 px-8 py-2 rounded-full">Comprar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-80 h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+        <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
+          <span class="text-neutral0 text-2xl font-bold">Plano Corporativo</span>
+          <span class="text-secondary text-2xl font-bold">R$ 80,00</span>
+        </div>
+      
+        <div class="h-[2px] w-full bg-neutral200"></div>
+      
+        <div class="p-6 flex flex-col justify-between h-full">
+          <div class="flex flex-col gap-3 w-full">
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Descontos exclusivos para
+              funcionários de empresas</p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Promoção da saúde e
+              bem-estar dos funcionários</p>
+            </div>
+            <div class="flex gap-3 items-center">
+              <img src="./src/icons/check.svg" alt="" class="h-6 w-6">
+              <p class="text-lg text-neutral100">Benefícios adicionais como
+              programas de bem-estar</p>
+            </div>
+      
+          </div>
+          
+          <div class="flex w-full justify-center">
+            <button class="bg-primary text-lg font-bold text-neutral0 px-8 py-2 rounded-full">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <section id="about" class="w-full h-auto py-20">
+    <div class="">
+      <span class="text-neutral0 font-bold text-[2rem]">Sobre Nós</span>
+    </div>
+
+    <div class="w-full flex gap-14 items-center">
+      <div class="w-1/2">
+        <p class="text-lg text-neutral100">A RubyGym é uma academia de destaque, no centro da cidade, oferecendo
+        não apenas equipamentos modernos e aulas de fitness, mas também orientação personalizada para os alunos alcançarem seus objetivos de saúde<br><br/>
+        Além do treinamento físico, a RubyGym promove um estilo de vida saudável por meio de eventos sociais e programas de voluntariado, fortalecendo a comunidade da academia<br><br />
+
+        Em suma, a RubyGym é um espaço holístico onde os membros encontram apoio, motivação e camaradagem para prosperar em sua busca por uma vida mais saudável
+      </p>
+      </div>
+
+      <div class="w-1/2">
+        <div class="carousel relative">
+          <div class="carousel-list overflow-hidden">
+            <img src="./src/images/img-1.jpg" alt="" class="w-full h-auto object-cover rounded-xl">
+            <img src="./src/images/img-2.jpg" alt="" class="w-full h-auto object-cover rounded-xl">
+            <img src="./src/images/img-3.jpg" alt="" class="w-full h-auto object-cover rounded-xl">
+            <img src="./src/images/img-4.jpg" alt="" class="w-full h-auto object-cover rounded-xl">
+          </div>
+
+          <div role="tablist" class="carousel-indicators mt-4 flex w-full justify-start"></div>
+
+          <div class="absolute right-0 bottom-[-14px]">
+            <button class="w-8 h-4"><img src="./src/icons/arrow-left.svg" alt=""></button>
+            <button class="w-8 h-4"><img src="./src/icons/arrow-right.svg" alt=""></button>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

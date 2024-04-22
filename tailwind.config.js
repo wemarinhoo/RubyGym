@@ -12,7 +12,8 @@ module.exports = {
         secondary: "#00FB73"
       },
       fontFamily: {
-        "sans-serif": ["Roboto", "sans-serif"]
+        "sans-serif": ["Roboto", "sans-serif"],
+        "grotesk": ["Space Grotesk", "sans-serif"]
       }
     },
   },
