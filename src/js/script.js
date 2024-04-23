@@ -7,6 +7,10 @@ new Glider(document.querySelector(".carousel-list"), {
   duration: "3",
   dragVelocity: "1.5",
   draggable: true,
+  arrows: {
+    prev: ".btn-left",
+    next: ".btn-right"
+  }
 });
 })
 
