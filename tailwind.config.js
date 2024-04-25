@@ -14,7 +14,7 @@ module.exports = {
       fontFamily: {
         "sans-serif": ["Roboto", "sans-serif"],
         "grotesk": ["Space Grotesk", "sans-serif"]
-      }
+      },
     },
   },
   plugins: [],
