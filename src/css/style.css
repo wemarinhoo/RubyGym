@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+  scrollbar-width: thin;
+  scrollbar-color: #B80100 #000000;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #B80100;
+  border-radius: 8px
+}
+
 .carousel-indicators .glider-dot{
   display: block;
   width: 32px;
