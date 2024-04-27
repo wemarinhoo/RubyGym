@@ -26,6 +26,16 @@ mobileBtn.addEventListener('click', () => {
 linksMenu.forEach(tab => tab.addEventListener('click', () => toggleMenu()))
 linksMenu.forEach(tab => tab.addEventListener('click', () => toggleMenuBarsIcon()))
 
+const sr = ScrollReveal({
+  origin: 'bottom',
+  distance: '30px',
+  duration: 1000,
+  delay: 0,
+  easing: 'ease-in-out',
+  reset: false,
+});
+
+sr.reveal('.reveal-animation')
 window.addEventListener('load', () => {
 new Glider(document.querySelector(".carousel-list"), {
   slidesToShow: 1,

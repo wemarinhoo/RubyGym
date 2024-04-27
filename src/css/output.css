@@ -2358,10 +2358,6 @@ video {
   -moz-osx-font-smoothing: auto;
 }
 
-.opacity-100 {
-  opacity: 1;
-}
-
 .opacity-80 {
   opacity: 0.8;
 }
@@ -2828,6 +2824,11 @@ html::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
+.group:hover .group-hover\:-translate-y-2 {
+  --tw-translate-y: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group:hover .group-hover\:bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(184 1 0 / var(--tw-bg-opacity));
@@ -2987,6 +2988,10 @@ html::-webkit-scrollbar-thumb {
 
   .lg\:items-start {
     align-items: flex-start;
+  }
+
+  .lg\:overflow-hidden {
+    overflow: hidden;
   }
 
   .lg\:px-14 {

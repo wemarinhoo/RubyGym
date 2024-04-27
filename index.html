@@ -10,53 +10,51 @@
   <link rel="shortcut icon" href="./src/icons/logo.svg" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="./src/js/script.js" defer></script>
+  <script src="./src/js/script.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js" defer></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body class="bg-neutral300 font-sans-serif flex flex-col w-screen px-7 md:px-14 lg:px-28 antialiased">
   <header class="flex w-full py-4 items-center justify-between fixed right-0 px-7 md:px-14 lg:px-28 bg-neutral300 z-10">
-      <a href="#home"><p class="text-neutral0 text-[2rem] font-bold font-grotesk"><span class="text-primary">Ruby</span>Gym</p></a>
+      <a href="#home" class="reveal-animation"><p class="text-neutral0 text-[2rem] font-bold font-grotesk"><span class="text-primary">Ruby</span>Gym</p></a>
 
-    <nav>
-      <ul class="hidden lg:flex items-center gap-16">
-        <li><a href="#advantages" class="text-neutral0 text-lg hover:text-primary transition-colors duration-300">Vantagens</a></li>
-        <li><a href="#member-ship" class="text-neutral0 text-lg hover:text-primary transition-colors duration-300">Planos</a></li>
-        <li><a href="#about" class="text-neutral0 text-lg hover:text-primary transition-colors duration-300">Sobre</a></li>
-        <li><a href="#trainers" class="text-neutral0 text-lg hover:text-primary transition-colors duration-300">Treinadores</a></li>
+    <nav id="navbar" class="lg:relative absolute lg:right-auto right-0 lg:left-auto left-0 lg:top-auto top-16 lg:h-auto h-screen lg:w-auto w-screen bg-neutral300 hidden lg:flex duration-300">
+      <ul class="reveal-animation flex flex-col lg:flex-row items-center gap-16 lg:w-auto w-full bg-neutral300 mt-16 lg:mt-0">
+        <li><a href="#advantages" class="links-menu text-neutral0 text-lg hover:text-primary transition-colors duration-300">Vantagens</a></li>
+        <li><a href="#member-ship" class="links-menu text-neutral0 text-lg hover:text-primary transition-colors duration-300">Planos</a></li>
+        <li><a href="#about" class="links-menu text-neutral0 text-lg hover:text-primary transition-colors duration-300">Sobre</a></li>
+        <li><a href="#trainers" class="links-menu text-neutral0 text-lg hover:text-primary transition-colors duration-300">Treinadores</a></li>
       </ul>
     </nav>
 
-    <button aria-label="menu" class="text-3xl text-neutral0 lg:hidden"><i class="fa-solid fa-bars"></i></button>
+    <button aria-label="menu" id="mobile-btn" class="reveal-animation text-3xl text-neutral0 lg:hidden"><i id="menu-bars" class="fa-solid fa-bars"></i></button>
   </header>
 
   <section id="home" class="w-full h-[100vh] lg:h-[110vh] flex items-center gap-20">
      <div class="flex flex-col gap-10 items-center lg:items-start w-full lg:w-1/2">
-      <p class="text-neutral0 font-bold text-[2rem] md:text-[2.5rem] text-center lg:text-left">Sessão experimental gratuita
-      com um treinador</p>
+      <p class="reveal-animation text-neutral0 font-bold text-[2rem] md:text-[2.5rem] text-center lg:text-left">Sessão experimental gratuita com um treinador</p>
 
-      <div> 
+      <div class="reveal-animation"> 
         <button class="text-neutral0 font-bold text-lg bg-primary rounded-full px-8 py-3 hover:-translate-y-2 duration-300">Contate-nos</button>
       </div>
      </div>
 
      <div class="w-1/2 hidden lg:block">
-      <img src="./src/images/home.jpg" alt="" class=" w-full h-auto rounded-xl">
+      <img src="./src/images/home.jpg" alt="" class="reveal-animation w-full h-auto rounded-xl opacity-80">
      </div>
   </section>
 
   <section id="advantages" class="w-full h-auto py-20">
-    <div class="mb-12 md:mb-28">
+    <div class="reveal-animation mb-12 md:mb-28">
       <span class="text-neutral0 font-bold text-2xl md:text-[2rem]">Vantagens Exclusivas</span>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
-      <div class="flex items-center gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-20">
+      <div class="flex items-center gap-6 reveal-animation">
         <div>
           <img src="./src/icons/exclusive-classes.svg" alt="" class="w-12 h-12">
         </div>
@@ -67,7 +65,7 @@
         </div>
       </div>
 
-      <div class="flex items-center gap-6">
+      <div class="flex items-center gap-6 reveal-animation">
         <div>
           <img src="./src/icons/four-zones.svg" alt="" class="w-12 h-12">
         </div>
@@ -78,7 +76,7 @@
         </div>
       </div>
 
-      <div class="flex items-center gap-6">
+      <div class="flex items-center gap-6 reveal-animation">
         <div>
           <img src="./src/icons/personalized-training.svg" alt="" class="w-12 h-12">
         </div>
@@ -89,7 +87,7 @@
         </div>
       </div>
 
-      <div class="flex items-center gap-6">
+      <div class="flex items-center gap-6 reveal-animation">
         <div>
           <img src="./src/icons/discounts.svg" alt="" class="w-12 h-12">
         </div>
@@ -104,11 +102,11 @@
 
   <section id="member-ship" class="w-full h-auto py-20">
       <div class="w-full flex justify-center mb-12 md:mb-28">
-        <span class="text-2xl lg:text-[2rem] text-neutral0 font-bold">Planos Disponíveis</span>
+        <span class="reveal-animation text-2xl lg:text-[2rem] text-neutral0 font-bold">Planos Disponíveis</span>
       </div>
       
-      <div class="w-full flex overflow-x-auto px-1 py-2 md:grid-cols-2 md:grid lg:grid-cols-3 lg:px-14 gap-6 md:gap-12">
-        <div class="min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+      <div class="w-full flex overflow-x-auto px-1 py-3 md:grid-cols-2 md:grid lg:grid-cols-3 lg:px-14 gap-6 md:gap-12 lg:overflow-hidden">
+        <div class="reveal-animation min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
           <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
             <span class="text-neutral0 text-lg md:text-2xl font-bold">Plano Mensal</span>
             <span class="text-secondary text-lg md:text-2xl font-bold">R$ 100,00</span>
@@ -143,7 +141,7 @@
         </div>
       </div>
 
-      <div class="min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+      <div class="reveal-animation min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
         <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
           <span class="text-neutral0 text-lg md:text-2xl font-bold">Plano Trimestral</span>
           <span class="text-secondary text-lg md:text-2xl font-bold">R$ 300,00</span>
@@ -179,7 +177,7 @@
         </div>
       </div>
 
-      <div class="min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+      <div class="reveal-animation min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
         <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
           <span class="text-neutral0 text-lg md:text-2xl font-bold">Plano Semestral</span>
           <span class="text-secondary text-lg md:text-2xl font-bold">R$ 540,00</span>
@@ -213,7 +211,7 @@
         </div>
       </div>
 
-      <div class="min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+      <div class="reveal-animation min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
         <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
           <span class="text-neutral0 text-lg md:text-2xl font-bold">Plano Anual</span>
           <span class="text-secondary text-lg md:text-2xl font-bold">R$ 960,00</span>
@@ -247,7 +245,7 @@
         </div>
       </div>
 
-      <div class="min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+      <div class="reveal-animation min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
         <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
           <span class="text-neutral0 text-lg md:text-2xl font-bold">Plano Familiar</span>
           <span class="text-secondary text-lg md:text-2xl font-bold">R$ 350,00</span>
@@ -281,7 +279,7 @@
         </div>
       </div>
 
-      <div class="min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
+      <div class="reveal-animation min-w-60 min-h-[340px] md:w-80 md:h-[432px] ring-2 ring-neutral200 rounded-xl flex flex-col group hover:-translate-y-2 duration-300 hover:ring-primary">
         <div class="flex flex-col py-4 gap-3 items-center  group-hover:bg-primary rounded-t-xl duration-300">
           <span class="text-neutral0 text-lg md:text-2xl font-bold">Plano Corporativo</span>
           <span class="text-secondary text-lg md:text-2xl font-bold">R$ 80,00</span>
@@ -318,13 +316,13 @@
   </section>
 
   <section id="about" class="w-full h-auto py-20">
-    <div>
+    <div class="reveal-animation">
       <span class="text-neutral0 font-bold text-2xl md:text-[2rem]">Sobre Nós</span>
     </div>
 
     <div class="w-full flex flex-col lg:flex-row gap-14 mt-8">
       <div class="w-full lg:w-1/2">
-        <p class="text-sm md:text-lg text-neutral100">A RubyGym é uma academia de destaque, no centro da cidade, oferecendo
+        <p class="reveal-animation text-sm md:text-lg text-neutral100">A RubyGym é uma academia de destaque, no centro da cidade, oferecendo
         não apenas equipamentos modernos e aulas de fitness, mas também orientação personalizada para os alunos alcançarem seus objetivos de saúde<br><br/>
         Além do treinamento físico, a RubyGym promove um estilo de vida saudável por meio de eventos sociais e programas de voluntariado, fortalecendo a comunidade da academia<br><br />
 
@@ -333,7 +331,7 @@
       </div>
 
       <div class="w-full lg:w-1/2">
-        <div class="carousel relative">
+        <div class="reveal-animation carousel relative">
           <div class="carousel-list overflow-hidden">
             <img src="./src/images/img-1.jpg" alt="" class="w-full h-auto object-cover rounded-xl">
             <img src="./src/images/img-2.jpg" alt="" class="w-full h-auto object-cover rounded-xl">
@@ -355,11 +353,11 @@
 
   <section class="w-full h-auto py-20" id="trainers">
     <div class="w-full flex justify-center mb-12 md:mb-28">
-      <span class="text-2xl md:text-[2rem] text-neutral0 font-bold">Nossa Equipe</span>
+      <span class="reveal-animation text-2xl md:text-[2rem] text-neutral0 font-bold">Nossa Equipe</span>
     </div>
 
-    <div class=" flex px-1 py-2 overflow-x-auto md:grid md:grid-cols-3 lg:grid-cols-4 w-full gap-6">
-      <div class="min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
+    <div class=" overflow-hidden flex px-1 py-2 overflow-x-auto md:grid md:grid-cols-3 lg:grid-cols-4 w-full gap-6">
+      <div class="reveal-animation min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
         <div>
           <img src="./src/images/trainer-female1.jpg" alt="" class="w-full h-80 rounded-xl object-cover">
         </div>
@@ -375,7 +373,7 @@
         </div>
       </div>
 
-      <div class="min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
+      <div class="reveal-animation min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
         <div>
           <img src="./src/images/trainer-male1.jpg" alt="" class="w-full h-80 rounded-xl object-cover">
         </div>
@@ -397,7 +395,7 @@
         </div>
       </div>
 
-      <div class="min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
+      <div class="reveal-animation min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
         <div>
           <img src="./src/images/trainer-female2.jpg" alt="" class="w-full h-80 rounded-xl object-cover">
         </div>
@@ -419,7 +417,7 @@
         </div>
       </div>
 
-      <div class="min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
+      <div class="reveal-animation min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
         <div>
           <img src="./src/images/trainer-male2.jpg" alt="" class="w-full h-80 rounded-xl object-cover">
         </div>
@@ -435,7 +433,7 @@
         </div>
       </div>
 
-      <div class="min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
+      <div class="reveal-animation min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
         <div>
           <img src="./src/images/trainer-female3.jpg" alt="" class="w-full h-80 rounded-xl object-cover">
         </div>
@@ -457,7 +455,7 @@
         </div>
       </div>
 
-      <div class="min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
+      <div class="reveal-animation min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
         <div>
           <img src="./src/images/trainer-male3.jpg" alt="" class="w-full h-80 rounded-xl object-cover">
         </div>
@@ -479,7 +477,7 @@
         </div>
       </div>
 
-      <div class="min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
+      <div class="reveal-animation min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
         <div>
           <img src="./src/images/trainer-female4.jpg" alt="" class="w-full h-80 rounded-xl object-cover">
         </div>
@@ -501,7 +499,7 @@
         </div>
       </div>
 
-      <div class="min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
+      <div class="reveal-animation min-w-52 md:w-auto ring-2 ring-neutral200 rounded-xl flex flex-col p-3 gap-3">
         <div>
           <img src="./src/images/trainer-male4.jpg" alt="" class="w-full h-80 rounded-xl object-cover">
         </div>
@@ -527,27 +525,27 @@
 
   <footer class="w-full flex flex-col lg:flex-row gap-6 justify-between py-20">
     <div class="flex flex-col gap-3 lg:w-1/3">
-      <h6 class="text-base md:text-2xl text-neutral0 font-bold font-grotesk"><span class="text-primary">Ruby</span>Gym</h6>
-      <p class="text-sm md:text-lg text-neutral100 w-full">desenvolva força e confiança em nossa academia com equipamentos de última geração, treinos personalizados e uma comunidade motivadora</p>
+      <h6 class="reveal-animation text-base md:text-2xl text-neutral0 font-bold font-grotesk"><span class="text-primary">Ruby</span>Gym</h6>
+      <p class="reveal-animation text-sm md:text-lg text-neutral100 w-full">desenvolva força e confiança em nossa academia com equipamentos de última geração, treinos personalizados e uma comunidade motivadora</p>
     </div>
 
     <div class="flex flex-col gap-3">
-      <h6 class="text-base md:text-2xl text-neutral0 font-bold font-grotesk">Endereço</h6>
+      <h6 class="reveal-animation text-base md:text-2xl text-neutral0 font-bold font-grotesk">Endereço</h6>
       <div>
-        <p class="text-sm md:text-lg text-neutral100 w-full">Av. Atlântica, 1234</p>
-        <p class="text-sm md:text-lg text-neutral100 w-full">Copacabana - RJ</p>
-        <p class="text-sm md:text-lg text-neutral100 w-full">CEP: 22010-000</p>
+        <p class="reveal-animation text-sm md:text-lg text-neutral100 w-full">Av. Atlântica, 1234</p>
+        <p class="reveal-animation text-sm md:text-lg text-neutral100 w-full">Copacabana - RJ</p>
+        <p class="reveal-animation text-sm md:text-lg text-neutral100 w-full">CEP: 22010-000</p>
       </div>
     </div>
 
     <div class="flex flex-col gap-3">
-      <h6 class="text-base md:text-2xl text-neutral0 font-bold font-grotesk">Contato</h6>
+      <h6 class="reveal-animation text-base md:text-2xl text-neutral0 font-bold font-grotesk">Contato</h6>
       <div>
-        <p class="text-sm md:text-lg text-neutral100 w-full flex gap-3 items-center"><img src="./src/icons/phone.svg" alt="" class=" w-4 h-4 md:w-5 md:h-5">(21) 1234-5678</p>
-        <p class="text-sm md:text-lg text-neutral100 w-full flex gap-3 items-center"><img src="./src/icons/email.svg" alt="" class=" w-4 h-4 md:w-5 md:h-5">rubygym@gmail.com</p>
+        <p class="reveal-animation text-sm md:text-lg text-neutral100 w-full flex gap-3 items-center"><img src="./src/icons/phone.svg" alt="" class=" w-4 h-4 md:w-5 md:h-5">(21) 1234-5678</p>
+        <p class="reveal-animation text-sm md:text-lg text-neutral100 w-full flex gap-3 items-center"><img src="./src/icons/email.svg" alt="" class=" w-4 h-4 md:w-5 md:h-5">rubygym@gmail.com</p>
       </div>
 
-      <div class="flex w-full gap-3">
+      <div class="reveal-animation flex w-full gap-3">
         <button
           class="w-8 h-8 rounded-full ring-1 ring-neutral100 flex items-center justify-center hover:ring-primary hover:text-primary text-neutral100 text-1xl duration-300"><i
             class="fa-brands fa-instagram"></i></button>
