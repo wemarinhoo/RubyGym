@@ -36,6 +36,7 @@ const sr = ScrollReveal({
   duration: 1000,
   easing: 'ease-in-out',
   reset: false,
+  mobile: false,
 })
 
 sr.reveal('.reveal-animation')
