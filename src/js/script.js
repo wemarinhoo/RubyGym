@@ -23,17 +23,20 @@ mobileBtn.addEventListener('click', () => {
 })
 
 
-linksMenu.forEach(tab => tab.addEventListener('click', () => toggleMenu()))
-linksMenu.forEach(tab => tab.addEventListener('click', () => toggleMenuBarsIcon()))
+linksMenu.forEach(link => {
+    link.addEventListener('click', () => {
+        toggleMenu();
+        toggleMenuBarsIcon();
+    })
+})
 
 const sr = ScrollReveal({
   origin: 'bottom',
-  distance: '30px',
+  distance: '48px',
   duration: 1000,
-  delay: 0,
   easing: 'ease-in-out',
   reset: false,
-});
+})
 
 sr.reveal('.reveal-animation')
 window.addEventListener('load', () => {
@@ -49,6 +52,6 @@ new Glider(document.querySelector(".carousel-list"), {
     prev: ".btn-left",
     next: ".btn-right"
   }
-});
+})
 })
 
